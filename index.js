@@ -60,7 +60,8 @@ function showWinner() {
     } else {
         winnerResultsMsg.innerText = "Computer has won the game!"
     }
-    //Hide buttons when there is a winner
+    //Hide options when there is a winner
+    //show reset button when there is a winner
 
     optionsContainer.style.display = "none";
     resetGameBtn.style.display = "block";
