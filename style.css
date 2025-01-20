@@ -1,0 +1,126 @@
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+        background: linear-gradient(to right, #ff7e5f, #feb47b);  
+        animation: changeColor 10s infinite alternate;
+        text-align: center;
+        font-family: 'Exo 2', sans-serif;
+}
+@keyframes changeColor {
+        from { background-color: #ff7e5f; }
+        to { background-color: #feb47b; }
+      }
+h1 {
+    text-shadow: 2px 2px 4px #000000; /* Sombra */
+    color: #ffffff;
+    margin: 20px 0;
+}
+h2 {
+    color: #ffffff;
+    margin: 30px 0;
+}
+.score-container {
+    display: flex;
+    justify-content:space-evenly;
+    margin: 60px 0;
+    font-size: 1.7rem;
+    color: #ffffff;
+}
+#player-score {
+    color: rgb(5, 20, 224);
+    font-weight: bold;
+}
+#computer-score {
+    color: rgb(5, 20, 224);
+    font-weight: bold;
+}
+/*Botones*/
+.btn {
+    background-color: #4caf50; /* Color de fondo */ 
+    border: none; 
+    color: white; 
+    padding: 15px 32px; 
+    text-align: center; 
+    text-decoration: none; 
+    display: inline-block; 
+    font-size: 25px; 
+    margin: 4px 5px; 
+    cursor: pointer; 
+    border-radius: 12px; /* Bordes redondeados */ 
+    transition: background-color 0.3s ease, transform 0.2s;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.btn:hover {
+    background-color: #555; 
+    transform: scale(1.1); 
+}
+.results-container {
+    font-size: 1.3rem;
+    margin: 15px 0;
+  }
+/*Result*/
+#winner-msg {
+    margin-top: 25px;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ffffff;
+    animation: showMeTheWinner 1s ease-in-out forwards, resplandecer 1.5s ease-in-out infinite alternate;
+
+}
+@keyframes showMeTheWinner { 
+    from { 
+        opacity: 0; transform: scale(0.5); 
+    } 
+    to { 
+    opacity: 1; transform: scale(1); 
+    } 
+}
+#results-msg {
+    background: linear-gradient(to right, #ff7e5f, #4e2607); 
+    color: white;
+    font-size: 1.5rem;
+    padding: 10px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+#reset-game-btn {
+    display: none;
+    margin: 20px auto;
+}
+
+/*Count*/
+.players {
+    display: flex; 
+    align-items: center; 
+    font-size: 1.8rem;
+}
+.players .icon { 
+    margin-right: 10px; 
+    font-size: 2rem; 
+    color: #4caf50; /* Color del icono */ 
+}
+#player-score { 
+    color: #2196F3; /* Color para el jugador */ 
+    padding: 0 10px;
+    font-size: 2rem;
+} 
+
+#computer-score { 
+    color: #f44336; /* Color para la computadora */ 
+    padding: 0 10px;
+    font-size: 2rem;
+}
